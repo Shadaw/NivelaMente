@@ -1,5 +1,5 @@
-import Main from 'components/Main';
+import { HomeScreen } from 'screens/Home';
 
-export default function Home() {
-  return <Main />;
-}
+const Home = () => <HomeScreen />;
+
+export default Home;
