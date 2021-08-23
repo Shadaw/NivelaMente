@@ -1,5 +1,5 @@
 import { ActiveLink } from 'components/ActiveLink';
-import { Button } from 'components/Button';
+import { LoginButton } from 'components/LoginButton';
 
 import { Container, Content } from './styles';
 
@@ -11,7 +11,7 @@ export const Header = () => {
         <nav>
           <ActiveLink href="courses">Cursos</ActiveLink>
           <ActiveLink href="">Sobre</ActiveLink>
-          <Button>Login</Button>
+          <LoginButton />
         </nav>
       </Content>
     </Container>
