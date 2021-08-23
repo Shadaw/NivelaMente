@@ -61,7 +61,7 @@ export const AnimationContainer = styled.div`
 
 export const Background = styled.div`
   flex: 1;
-  background: url('http://localhost:3000/images/background.png') no-repeat
-    center;
+  background: url('https://recipes-share.s3.sa-east-1.amazonaws.com/background.png')
+    no-repeat center;
   background-size: cover;
 `;
