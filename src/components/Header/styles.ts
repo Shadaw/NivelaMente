@@ -26,7 +26,11 @@ export const Content = styled.div`
     height: 5rem;
 
     button {
-      margin-left: 32px;
+      margin-left: 2rem;
+    }
+
+    > div {
+      margin-left: 2rem;
     }
   }
 `;
