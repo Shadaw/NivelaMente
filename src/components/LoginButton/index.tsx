@@ -20,7 +20,7 @@ export const LoginButton = () => {
       <UserIcon name={user.name} />
     </Dropdown>
   ) : (
-    <Button radius onClick={handleRedirectToLogin}>
+    <Button isRadius onClick={handleRedirectToLogin}>
       Login
     </Button>
   );

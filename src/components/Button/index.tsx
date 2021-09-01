@@ -4,12 +4,16 @@ import { Container } from './styles';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode;
-  radius?: boolean;
+  isRadius?: boolean;
 };
 
-export const Button = ({ children, radius = false, ...rest }: ButtonProps) => {
+export const Button = ({
+  children,
+  isRadius = false,
+  ...rest
+}: ButtonProps) => {
   return (
-    <Container radius={radius} {...rest}>
+    <Container isRadius={isRadius} {...rest}>
       {children}
     </Container>
   );

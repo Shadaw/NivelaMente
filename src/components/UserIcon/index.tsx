@@ -8,7 +8,7 @@ type UserIconProps = {
 export const UserIcon = ({ name, size = 40 }: UserIconProps) => {
   return (
     <Container size={size}>
-      <p>{name.substr(0, 1)}</p>
+      <p>{name.substr(0, 1).toUpperCase()}</p>
     </Container>
   );
 };
