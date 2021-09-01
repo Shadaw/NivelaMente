@@ -16,7 +16,7 @@ export const HomeScreen = () => {
         <Hero>
           <h1>Lorem Ipsum is dummy the and typesetting. </h1>
           <p>Lorem ipsum dolor sit amet.</p>
-          <Button radius>lorem ipsum</Button>
+          <Button isRadius>lorem ipsum</Button>
         </Hero>
         <img src="/images/person.svg" alt="Mulher estudando" />
       </Container>
