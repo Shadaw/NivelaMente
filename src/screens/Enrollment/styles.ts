@@ -6,7 +6,8 @@ export const Container = styled.main`
   padding: 0 2rem;
   margin-top: 7rem;
   margin-bottom: 5rem;
-  height: calc(100vh - 7rem);
+  height: 100%;
+  min-height:calc(100vh - 7rem);
 
   display: flex;
   flex-direction: column;
@@ -14,7 +15,7 @@ export const Container = styled.main`
   justify-content: space-between;
 
   img {
-    width: 60%;
+    width: 100%;
   }
 `;
 
@@ -29,3 +30,24 @@ export const TextContent = styled.div`
   }
 
 `;
+
+export const ImgContent = styled.img`
+  width: 100%;
+  height: 340px;
+  border-radius: 20px;
+  border: solid black 2px;
+  object-fit: cover;
+`;
+
+export const UserField = styled.div`
+  display: flex;
+  align-items: center;
+  align-self: start;
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  div {
+    margin-right: 20px;
+  }
+`;
+

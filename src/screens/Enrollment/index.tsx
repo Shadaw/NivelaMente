@@ -3,9 +3,9 @@ import Head from 'next/head';
 import { Header } from 'components/Header';
 import { Button } from 'components/Button';
 import { Footer } from 'components/Footer';
+import { UserIcon } from 'components/UserIcon';
 
-// import { Container, TextStyle, TitleStyle, TextContent } from './styles';
-import { Container, TextContent } from './styles';
+import { Container, TextContent, ImgContent, UserField } from './styles';
 
 export const EnrollmentScreen = () => {
   return (
@@ -15,11 +15,13 @@ export const EnrollmentScreen = () => {
       </Head>
       <Header />
       <Container>
-        {/* <img src="" alt="" /> */}
-        <div>
-          {/* <Button>Agua</Button>
-          <Button>Agua</Button> */}
-        </div>
+        <ImgContent src="https://viacarreira.com/wp-content/uploads/2021/07/mec-oferece-cursos-de-matematica-gratuitos-e-online.png" alt="Mulher estudando"/>
+        <UserField>
+          <UserIcon name="Vanderlei"/>
+          <p>
+            Vanderlei
+          </p>
+        </UserField>
         <TextContent>
           <h1>Lorem Ipsum</h1>
           <p>
