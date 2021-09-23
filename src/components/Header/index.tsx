@@ -9,7 +9,7 @@ export const Header = () => {
       <Content>
         <img src="/images/logo.svg" alt="Nivela Mente" />
         <nav>
-          <ActiveLink href="courses">Cursos</ActiveLink>
+          <ActiveLink href="course">Cursos</ActiveLink>
           <ActiveLink href="">Sobre</ActiveLink>
           <LoginButton />
         </nav>

@@ -19,16 +19,15 @@ export type FormProps = {
   description: string;
   category: string;
   image: File[];
-}
+};
 
 export const CreateCourseScreen = () => {
-
-  const {token} = useAuth();
+  const { token } = useAuth();
   const { register, handleSubmit } = useForm<FormProps>();
 
   const handleCreateCourse: SubmitHandler<FormProps> = useCallback(
-    async (data) => {
-      createCourse({...data, token});
+    async data => {
+      createCourse({ ...data, token });
     },
     [token],
   );
@@ -42,28 +41,25 @@ export const CreateCourseScreen = () => {
       <Container>
         <form onSubmit={handleSubmit(handleCreateCourse)}>
           <ImageUpload register={register} />
-          <Input title="Título" {...register('title', { required: true })}></Input>
-          <TextArea title="Descrição" {...register('description', { required: true })}></TextArea>
+          <Input
+            title="Título"
+            {...register('title', { required: true })}
+          ></Input>
+          <TextArea
+            title="Descrição"
+            {...register('description', { required: true })}
+          ></TextArea>
           <div>
             <Select {...register('category', { required: true })}>
-              <option value="portuguese">
-                Português
-              </option>
-              <option value="math">
-                Matemática
-              </option>
-              <option value="english">
-                Inglês
-              </option>
+              <option value="portuguese">Português</option>
+              <option value="math">Matemática</option>
+              <option value="english">Inglês</option>
             </Select>
           </div>
           <Footer>
-            <Button type="submit">
-              Cadastrar
-            </Button>
+            <Button type="submit">Cadastrar</Button>
           </Footer>
         </form>
-
       </Container>
     </>
   );

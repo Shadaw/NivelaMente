@@ -8,7 +8,13 @@ type createCourseParams = {
   token: string;
 };
 
-export const createCourse = async ({ image, title, description, category, token }: createCourseParams) => {
+export const createCourse = async ({
+  image,
+  title,
+  description,
+  category,
+  token,
+}: createCourseParams) => {
   const formData = new FormData();
 
   formData.append('image', image[0]);
@@ -18,7 +24,9 @@ export const createCourse = async ({ image, title, description, category, token 
   formData.append('status', 'draft');
 
   try {
-    const response = await api.post('/courses', formData, {headers: {Authorization: `Bearer ${token}`}});
+    const response = await api.post('/courses', formData, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
 
     return response.data;
   } catch (error) {
