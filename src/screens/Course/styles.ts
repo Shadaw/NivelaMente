@@ -12,11 +12,10 @@ export const Container = styled.main`
   align-items: center;
   justify-content: space-between;
 
-  form{
+  form {
     height: 100%;
     width: 100%;
   }
-  
 `;
 
 export const Select = styled.select`
@@ -24,4 +23,4 @@ export const Select = styled.select`
   border: none;
   border-radius: 5px;
   border: 1px solid #dedede;
-`
+`;
