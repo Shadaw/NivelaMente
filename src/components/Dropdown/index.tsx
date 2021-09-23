@@ -10,7 +10,6 @@ type DropdownProps = {
 };
 
 export const Dropdown = ({ children }: DropdownProps) => {
-
   const { push } = useRouter();
   const { signOut } = useAuth();
 
@@ -21,17 +20,20 @@ export const Dropdown = ({ children }: DropdownProps) => {
     signOut();
   }, [signOut]);
 
-  const handleRedirect = useCallback((route: string) => {
-    push(route);
-    setIsOpen(false);
-  }, [push]);
+  const handleRedirect = useCallback(
+    (route: string) => {
+      push(route);
+      setIsOpen(false);
+    },
+    [push],
+  );
 
   return (
     <Container isOpen={isOpen}>
       <Title onClick={() => setIsOpen(!isOpen)}>{children}</Title>
       <Content aria-hidden={!isOpen}>
         <DropdownItems>
-          <div onClick={()=> handleRedirect('/createcourse')}>
+          <div onClick={() => handleRedirect('/createcourse')}>
             <FaPlus />
             <p>Criar curso</p>
           </div>

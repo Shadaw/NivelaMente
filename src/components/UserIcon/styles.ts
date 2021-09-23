@@ -9,6 +9,7 @@ export const Container = styled.div<ContainerProps>`
   align-items: center;
   justify-content: center;
   background-color: var(--primary);
+  color: #ffffff;
 
   ${({ size }) =>
     size &&
