@@ -5,10 +5,9 @@ export const Container = styled.footer`
   align-items: center;
   justify-content: center;
   height: 5rem;
-  background: #dadada;
+  background: #e8e8e8;
   position: fixed;
   bottom: 0;
   right: 0;
   left: 0;
 `;
-

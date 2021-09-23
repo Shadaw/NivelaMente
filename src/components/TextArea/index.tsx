@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, forwardRef, TextareaHTMLAttributes } from 'react';
+import { forwardRef, TextareaHTMLAttributes } from 'react';
 
 import { Container } from './styles';
 

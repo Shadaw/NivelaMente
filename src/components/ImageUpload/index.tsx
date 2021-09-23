@@ -4,12 +4,12 @@ import { Container } from './styles';
 import { FormProps } from 'screens/Course';
 import { useCallback, useState } from 'react';
 
-type ImageUpload = {
+type ImageUploadProps = {
   register: UseFormRegister<FormProps>;
   value?: string;
 };
 
-export const ImageUpload = ({ register, value = '' }: ImageUpload) => {
+export const ImageUpload = ({ register, value = '' }: ImageUploadProps) => {
   const [previewImage, setPreviewImage] = useState(value);
 
   const handleChangeImagePreview = useCallback((image: File[]) => {
@@ -44,4 +44,3 @@ export const ImageUpload = ({ register, value = '' }: ImageUpload) => {
     </Container>
   );
 };
-
