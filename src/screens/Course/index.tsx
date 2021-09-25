@@ -1,4 +1,7 @@
+import { useCallback, useState } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { SubmitHandler, useForm } from 'react-hook-form';
 
 import { Header } from 'components/Header';
 import { Input } from 'components/Input';
@@ -8,8 +11,6 @@ import { ImageUpload } from 'components/ImageUpload';
 import { Footer } from 'components/Footer';
 
 import { Container, Select } from './styles';
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { useCallback } from 'react';
 
 import { createCourse } from 'services/createcourse';
 import { useAuth } from 'hooks/auth';
@@ -23,13 +24,22 @@ export type FormProps = {
 
 export const CreateCourseScreen = () => {
   const { token } = useAuth();
-  const { register, handleSubmit } = useForm<FormProps>();
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const { register, handleSubmit } = useForm<FormProps>({
+    mode: 'onChange',
+  });
 
   const handleCreateCourse: SubmitHandler<FormProps> = useCallback(
     async data => {
-      createCourse({ ...data, token });
+      setLoading(true);
+
+      await createCourse({ ...data, token });
+
+      setLoading(false);
+      router.push('/course');
     },
-    [token],
+    [token, router],
   );
 
   return (
@@ -57,7 +67,9 @@ export const CreateCourseScreen = () => {
             </Select>
           </div>
           <Footer>
-            <Button type="submit">Cadastrar</Button>
+            <Button loading={loading} type="submit">
+              Cadastrar
+            </Button>
           </Footer>
         </form>
       </Container>

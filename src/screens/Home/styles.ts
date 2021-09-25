@@ -30,8 +30,26 @@ export const Hero = styled.section`
     color: #b0b0b0;
   }
 
-  button {
+  a {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    background: var(--primary);
+    min-height: 45px;
+    width: 165px;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 40px;
     font-size: 1rem;
     margin-top: 2rem;
+
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
   }
 `;

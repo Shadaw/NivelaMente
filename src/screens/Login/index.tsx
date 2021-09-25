@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -17,12 +17,15 @@ type LoginFormProps = {
 
 export const LoginScreen = () => {
   const { register, handleSubmit } = useForm<LoginFormProps>();
+  const [loading, setLoading] = useState(false);
 
   const { signIn } = useAuth();
 
   const handleLogin: SubmitHandler<LoginFormProps> = useCallback(
     async ({ email, password }) => {
+      setLoading(true);
       await signIn({ email, password });
+      setLoading(false);
     },
     [signIn],
   );
@@ -46,7 +49,9 @@ export const LoginScreen = () => {
                 type="password"
                 {...register('password', { required: true })}
               />
-              <Button type="submit">Entrar</Button>
+              <Button loading={loading} type="submit">
+                Entrar
+              </Button>
               <p>
                 usuario novo? <Link href="signup">cadastra-se</Link>
               </p>

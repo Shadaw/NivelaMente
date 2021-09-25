@@ -42,6 +42,7 @@ export default createGlobalStyle`
 
   *[aria-hidden="true"] {
     visibility: hidden;
+    position: absolute;
   }
 
   @media (max-width: 1080px) {

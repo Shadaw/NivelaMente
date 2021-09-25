@@ -1,7 +1,7 @@
 import Head from 'next/head';
+import Link from 'next/link';
 
 import { Header } from 'components/Header';
-import { Button } from 'components/Button';
 
 import { Container, Hero } from './styles';
 
@@ -14,9 +14,11 @@ export const HomeScreen = () => {
       <Header />
       <Container>
         <Hero>
-          <h1>Lorem Ipsum is dummy the and typesetting. </h1>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <Button isRadius>lorem ipsum</Button>
+          <h1>Fique nivelado com o Nivelamente.</h1>
+          <p>cursos de Português, Matemática e Inglês.</p>
+          <Link href="/course">
+            <a>Cursos</a>
+          </Link>
         </Hero>
         <img src="/images/person.svg" alt="Mulher estudando" />
       </Container>
