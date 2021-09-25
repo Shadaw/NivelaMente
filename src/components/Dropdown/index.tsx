@@ -37,8 +37,6 @@ export const Dropdown = ({ children }: DropdownProps) => {
             <FaPlus />
             <p>Criar curso</p>
           </div>
-        </DropdownItems>
-        <DropdownItems>
           <div onClick={handleLogout}>
             <FaSignOutAlt />
             <p>Sair</p>

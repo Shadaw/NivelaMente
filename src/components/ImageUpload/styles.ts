@@ -16,7 +16,7 @@ export const Container = styled.label`
   margin-bottom: 1rem;
 
   div {
-    width: 100%;
+    min-width: 100%;
     height: 100%;
     position: relative;
     display: flex;

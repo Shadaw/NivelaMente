@@ -68,7 +68,7 @@ export const DropdownItems = styled.div`
     padding: 0.5rem;
     border: 1px solid transparent;
     background: #fbfbfb;
-    transition: border 0.2s, color 0.2s, background 0.2s;
+    transition: border 0.2s, color 0.2s;
 
     &:hover {
       color: var(--primary);

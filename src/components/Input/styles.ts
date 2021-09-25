@@ -13,6 +13,7 @@ export const Container = styled.div`
     border: none;
     border-radius: 5px;
     border: 1px solid #dedede;
+    min-height: 45px;
   }
 
   & + div {
